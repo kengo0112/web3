@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Home</title>
+    <style>
+        /* CSS styles go here */
+    </style>
+</head>
+
+<body>
+    <script>
+        class MultiplicationTable {
+            static generateTable() {
+                const table = document.createElement('table');
+                for (let i = 1; i <= 12; i++) {
+                    const row = document.createElement('tr');
+                    for (let j = 1; j <= 12; j++) {
+                        const cell = document.createElement('td');
+                        cell.textContent = `${i} x ${j} = ${i * j}`;
+                        row.appendChild(cell);
+                    }
+                    table.appendChild(row);
+                }
+                document.body.appendChild(table);
+            }
+        }
+
+        MultiplicationTable.generateTable();
+    </script>
+
+
+
+</body>
+
+</html>
